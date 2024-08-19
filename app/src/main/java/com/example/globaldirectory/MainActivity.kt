@@ -43,6 +43,9 @@ class MainActivity : AppCompatActivity() {
         var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, countries)
         binding.countries.adapter = adapter
 
+        // Set content description for the list of countries
+        binding.countries.contentDescription = "List of countries. Tap on a country to see details."
+
         // Pass country details to CountryActivity.
         binding.countries.setOnItemClickListener { parent, view, position, id ->
 

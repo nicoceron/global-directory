@@ -56,6 +56,18 @@ class CountryActivity : AppCompatActivity() {
         binding.totalCurr.text = getString(R.string.currency, currName, currCode, currSymbol)
         binding.language.text = getString(R.string.language, language)
 
+        // Set content descriptions dynamically
+        binding.flag.contentDescription = "Flag of $name"
+        binding.name.contentDescription = "Country name: $name"
+        binding.alpha3code.contentDescription = "Country code: $alpha3code"
+        binding.totalCurr.contentDescription =
+            "Currency: ${getString(R.string.currency, currName, currCode, currSymbol)}"
+        binding.totalRegion.contentDescription =
+            "Region: ${getString(R.string.region, region, subRegion)}"
+        binding.language.contentDescription = "Language spoken: $language"
+        binding.phoneButton.contentDescription =
+            "Button to initiate a phone call to a number in $name"
+
         // Set an OnClickListener on the phone button to initiate a dial action
         binding.phoneButton.setOnClickListener {
             // Create an Intent to open the phone dialer with the country's phone code

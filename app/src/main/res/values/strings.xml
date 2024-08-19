@@ -3,4 +3,6 @@
     <string name="region">%1$s / %2$s</string>
     <string name="currency">%1$s - %2$s [ %3$s ]</string>
     <string name="language">Language: %1$s</string>
+    <string name="country">Country</string>
+    <string name="code">Code</string>
 </resources>
